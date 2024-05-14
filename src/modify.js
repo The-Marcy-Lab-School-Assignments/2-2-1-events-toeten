@@ -2,6 +2,12 @@ const button = document.getElementById("click-button")
 let clickCount = 0;
 const clicked = () => {
   clickCount++
+  button.dataset.clicks = clickCount
+  updateButton()
+
+};
+
+const updateButton = () => {
   if (clickCount === 1) {
     button.textContent = `I've been clicked ${clickCount} time.`
   } else {
@@ -10,11 +16,17 @@ const clicked = () => {
 }
 
 const clickCounterHandler = (event) => {
-  button.addEventListener('click',(clicked))
+  button.addEventListener('click',clicked)
 };
 
-const handleKeydown = () => {
+
+const p = document.getElementById("keydown-tracker")
+const handleKeydown = (event) => {
+  let letter = event.key.toUpperCase()
+  p.textContent = `You pressed Key${letter}`
 };
+
+document.body.addEventListener('keydown',handleKeydown);
 
 const handleDelegation = (event) => {
   const resultSpan = document.querySelector('#delegation-result');
@@ -25,7 +37,8 @@ const addNewRandomNumber = () => {
 };
 
 const main = () => {
-  clickCounterHandler()
+  clickCounterHandler();
+  
   const delegationContainer = document.querySelector('#delegation');
 
   delegationContainer.addEventListener('click', handleDelegation);
