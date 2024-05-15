@@ -64,7 +64,7 @@ const addRandom = document.getElementById('add-random-num')
 const randomUl = document.getElementById('random-numbers')
 
 const addNewRandomNumber = (event) => {
-  const randomNumber = Math.random() + 1
+  const randomNumber = Math.random()
     const listItem = document.createElement("li")
     listItem.textContent = randomNumber
     randomUl.append(listItem)
