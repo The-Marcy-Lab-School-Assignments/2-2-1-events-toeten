@@ -59,8 +59,17 @@ const handleDelegation = (event) => {
   }
 };
 
-const addNewRandomNumber = () => {
+
+const addRandom = document.getElementById('add-random-num')
+const randomUl = document.getElementById('random-numbers')
+
+const addNewRandomNumber = (event) => {
+  const randomNumber = Math.random() + 1
+    const listItem = document.createElement("li")
+    listItem.textContent = randomNumber
+    randomUl.append(listItem)
 };
+addRandom.addEventListener('click', addNewRandomNumber);
 
 const main = () => {
   clickCounterHandler();
@@ -68,6 +77,7 @@ const main = () => {
   const delegationContainer = document.querySelector('#delegation');
 
   delegationContainer.addEventListener('click', handleDelegation);
+
 };
 
 main();
