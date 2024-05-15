@@ -10,4 +10,8 @@ const addOne = (event) => {
   button.addEventListener('click', increment)
 }
 
-addOne()
+
+const main = () => {
+  addOne()
+}
+main()
