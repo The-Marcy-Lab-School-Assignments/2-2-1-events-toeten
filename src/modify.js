@@ -23,8 +23,7 @@ const clickCounterHandler = (event) => {
 
 const p = document.getElementById("keydown-tracker")
 const handleKeydown = (event) => {
-  const letter = event.key
-  p.textContent = `You pressed Key${letter.toUpperCase()}`
+  p.textContent = `You pressed ${event.code}`
 };
 document.body.addEventListener('keydown', handleKeydown);
 
