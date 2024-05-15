@@ -58,6 +58,8 @@ const handleDelegation = (event) => {
   }
 };
 
+///////////////////////////////////
+
 
 const addRandom = document.getElementById('add-random-num')
 const randomUl = document.getElementById('random-numbers')
@@ -71,13 +73,15 @@ const addNewRandomNumber = (event) => {
 addRandom.addEventListener('click', addNewRandomNumber);
 
 
+/////////////////////////////////////////////////
+
 const removeListener = document.getElementById("remove");
 
 removeListener.addEventListener('click', (event) => {
   document.getElementById('delegation').removeEventListener('click', handleDelegation)
 });
 
-
+/////////////////////////////////////
 
 const main = () => {
   clickCounterHandler();
