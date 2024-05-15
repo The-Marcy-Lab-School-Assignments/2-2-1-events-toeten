@@ -50,10 +50,13 @@ const updateButtonInline = () => {
 
 notInline.addEventListener('click', clickedInline);
 
+///////////////////////////////
 
 const handleDelegation = (event) => {
   const resultSpan = document.querySelector('#delegation-result');
-  resultSpan.textContent = event.target.textContent;
+  if (event.target.matches('.grid-item') === true) {
+    resultSpan.textContent = event.target.textContent;;
+  }
 };
 
 const addNewRandomNumber = () => {
