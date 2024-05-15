@@ -71,10 +71,19 @@ const addNewRandomNumber = (event) => {
 };
 addRandom.addEventListener('click', addNewRandomNumber);
 
+
+const removeListener = document.getElementById("remove");
+
+removeListener.addEventListener('click', (event) => {
+  document.getElementById('delegation').removeEventListener('click', handleDelegation)
+});
+
+
+
 const main = () => {
   clickCounterHandler();
   
-  const delegationContainer = document.querySelector('#delegation');
+  const delegationContainer = document.querySelector('#delegation')
 
   delegationContainer.addEventListener('click', handleDelegation);
 
