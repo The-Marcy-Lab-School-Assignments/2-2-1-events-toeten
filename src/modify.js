@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass! You are killing it! */
 const button = document.getElementById("click-button")
 let clickCount = 0;
 const clicked = () => {
@@ -82,7 +83,7 @@ removeListener.addEventListener('click', (event) => {
 });
 
 /////////////////////////////////////
-
+/** FEEDBACK: What other variables and event handlers could go here? */
 const main = () => {
   clickCounterHandler();
   
